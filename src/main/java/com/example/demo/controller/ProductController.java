@@ -10,10 +10,14 @@ import com.example.demo.model.ProductModel;
 @RestController
 public class ProductController {
 
-    private ProductService productService = new ProductService();
+    private final ProductService productService;
+
+    public ProductController(ProductService productService) {
+        this.productService = productService;
+    }
 
     @GetMapping("/products")
-    public List<ProductModel> getAllProducts() {
+    public List<ProductModel> getProducts() {
         return productService.getAllProducts();
     }
 

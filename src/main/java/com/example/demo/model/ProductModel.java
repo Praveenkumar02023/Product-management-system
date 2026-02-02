@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
 @Getter
@@ -12,7 +13,7 @@ import jakarta.persistence.Entity;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProductModel {
-
+    @Id
     private int id;
     private String name;
     private double price;
