@@ -20,4 +20,10 @@ public class ProductService {
         return productRepository.findAll();
     }
 
+    public ProductModel createProduct(ProductModel product) {
+
+        return productRepository.save(product);
+
+    }
+
 }
